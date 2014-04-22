@@ -7,9 +7,9 @@ public class Ej10_01 {
 	 */
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		int celsius=0;		
+		float celsius;		
 		for(int i=0; i<=300; i=i+20){
-			celsius=(5/9)*(i-32);
+			celsius=(float) ((i-32)*(0.5555));
 			System.out.println("Fahrenheit: " +i +" Celsius: "+celsius);
 		}
 	}
