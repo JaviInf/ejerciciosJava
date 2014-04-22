@@ -29,6 +29,8 @@ public class Ej15_01 {
 			{
 				cont++;
 				System.out.println("Error: introduce otro, te quedan " + (5-cont) +"intentos");
+				if(numero>aleatorio) System.out.println("Pista: el numero es menor");
+				else System.out.println("Pista: el numero es mayor");
 				numero = entrada.nextInt();
 			}
 			
