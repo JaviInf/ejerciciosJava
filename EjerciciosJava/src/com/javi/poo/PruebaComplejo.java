@@ -26,6 +26,9 @@ public class PruebaComplejo {
 		Complejo b=new Complejo(100,10);
 		System.out.println((Complejo.sumar(a, b)).toString());
 		
+		System.out.println("Numero de instancias creadas: "+Complejo.numeroInstancias());
+		System.out.println("Numero de instancias creadas: "+numero.numeroInstancias1());
+		
 		
 		
 	}
