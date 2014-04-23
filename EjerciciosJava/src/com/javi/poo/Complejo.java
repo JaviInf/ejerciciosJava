@@ -28,7 +28,9 @@ public class Complejo {
 	}
 	
 	public static  Complejo sumar(Complejo a, Complejo b){
-		return a;
+		Complejo resultado= new Complejo(a.pReal, a.pImag);
+		resultado.sumar(b);
+		return resultado;
 		
 	}
 	
