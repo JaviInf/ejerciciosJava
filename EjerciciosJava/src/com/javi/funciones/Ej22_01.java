@@ -35,7 +35,7 @@ public class Ej22_01 {
 	 */
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		
+		System.out.println("Ejecucion de prueba");
       Object[] vec=calcularPrimos(89);
       System.out.println(Arrays.toString(vec));
 	}
