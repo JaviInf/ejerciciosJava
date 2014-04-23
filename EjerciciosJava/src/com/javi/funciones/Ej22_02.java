@@ -11,7 +11,9 @@ public class Ej22_02 {
 		// TODO Auto-generated method stub
 		Primo p= new Primo();
 		System.out.println("Version dos con dos clases");
-		System.out.println(Arrays.toString(p.calcularPrimos(35)));
+		System.out.println(Arrays.toString(p.calcularPrimos(34)));
+		System.out.println(Arrays.toString(p.calcularPrimos(65)));
+		System.out.println(Arrays.toString(p.calcularPrimos(95)));
 	}
 
 }

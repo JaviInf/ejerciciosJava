@@ -17,8 +17,8 @@ public class Ej16_01 {
 			vector[i]=numero;
 		}
 		
-		int max=0;
-		int min=9999999;
+		int max=Integer.MIN_VALUE;
+		int min=Integer.MAX_VALUE;
 		for(int i=0; i<vector.length; i++) {
 			System.out.println( "elemento "+i+ " "+vector[i]);
 			if(vector[i]>=max) max=vector[i];

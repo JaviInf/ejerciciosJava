@@ -21,7 +21,6 @@ public class Ej17_01 {
 		int vectorDadoVuelta[]= new int[10];
 		  for(int i=0; i<vector.length; i++){ 
 		         vectorDadoVuelta[i]=vector[vector.length-1-i]; 
-//		         System.out.println(" vector original" +vectorDadoVuelta[i]);
 		         
 		  } 
 		  System.out.println(Arrays.toString(vectorDadoVuelta));

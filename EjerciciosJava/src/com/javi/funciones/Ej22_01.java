@@ -6,7 +6,6 @@ import java.util.Vector;
 
 public class Ej22_01 {
 
-	
 	static boolean esPrimo (int numero){
 		int contador = 2;
 		boolean primo=true;
@@ -27,7 +26,6 @@ public class Ej22_01 {
 		    v.add(contador);
 		  contador++;
 		}
-		System.out.println();
 		return v.toArray();
 	}
 	/**

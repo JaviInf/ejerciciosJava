@@ -4,7 +4,7 @@ public class Complejo {
 
 	private double pReal;
 	private double pImag;
-	private static int contador;
+	private static int contador=0;
 	
 	public Complejo() {
 		this.pReal=1.0;
