@@ -14,9 +14,10 @@ public class Complejo {
 	}
 
 	public Complejo( double x, double y) {
+		this();
 		this.pReal=x;
 		this.pImag=y;
-		contador=contador+1;
+//		contador=contador+1;
 	}
 
 	public void asignar(double x, double y){
