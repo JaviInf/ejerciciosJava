@@ -1,9 +1,12 @@
 package com.javi.herencia;
 
+import java.util.ArrayList;
+
 public class Empresa {
 	private String nombre;
 	private final int tama–o;
 	private IEmpleado vectorEmpleados[];
+	private ArrayList<IEmpleado> trabajadores;
 	private static int contador=0;
 	
 	public static int getContador() {
@@ -12,6 +15,10 @@ public class Empresa {
 
 	public static void incContador() {
 		Empresa.contador++;
+	}
+	
+	public void decContador() {
+		Empresa.contador--;
 	}
 
 	public Empresa(String nombre, int tama–o) {
@@ -34,6 +41,11 @@ public class Empresa {
 	
 	public void despideEmpleado(int numEmpleado){
 		this.vectorEmpleados[numEmpleado]=null;
+		
+	}
+	
+	public void nuevoEmpleado(String nombre, double sueldo){
+		Empleado empleado= new Empleado(null, nombre, sueldo);
 		
 	}
 	

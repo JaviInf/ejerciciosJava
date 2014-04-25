@@ -15,6 +15,7 @@ public class Empleado implements IEmpleado {
 		Empresa.incContador();
 		this.numeroEmpleado=Empresa.getContador();
 	}
+	
 	public Empleado(Empresa empresa, String nombre, int sueldo, int numeroEmpleado) {
 		this.empresa=empresa;
 		this.nombre=nombre;
@@ -40,13 +41,11 @@ public class Empleado implements IEmpleado {
 	@Override
 	public void setNombre( String nuevoNombre) {
 	this.nombre=nuevoNombre;
-		
 	}
 
 	@Override
 	public void setSueldo(double sueldo) {
 		this.sueldo=sueldo;
-		
 	}
 
 	@Override
@@ -56,6 +55,7 @@ public class Empleado implements IEmpleado {
 
 	@Override
 	public void despedir() {
+		empresa.decContador();
 		empresa.despideEmpleado(this.numeroEmpleado);
 	}
 

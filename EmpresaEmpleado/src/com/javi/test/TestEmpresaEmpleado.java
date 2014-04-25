@@ -34,29 +34,36 @@ public class TestEmpresaEmpleado {
 	
 	//EMPLEADOOOO
 	@Test
-	public void testDespideEmpleado() {
+	public void testDespide() {
 		//assertEquals("Empleado","Pepito", empleado.getNombre());
 	}
 	
 	@Test
-	public void testEmpleadogetNombre() {
+	public void testGetNombreEmpleado() {
 		assertEquals("Empleado","Pepito", empleado.getNombre());
 	}
 	
 	@Test
-	public void testEmpleadogetSueldo() {
+	public void testGetSueldo() {
 		assertEquals("Empleado",10.000, 0, empleado.getSueldo());
 	}
 	
 	@Test
-	public void testEmpleadogetNumEmpleado() {
+	public void testgetNumEmpleado() {
 		assertEquals("Empleado",7, empleado.getNumEmpleado());
 	}
 	
 	@Test
-	public void testEmpleadoAumentarSueldo() {
-	//
+	public void testAumentarSueldo() {
 	}
+	
+	@Test
+	public void testSetNombre() {
+		empleado.setNombre("Fulano");
+		assertEquals("Empleado","Fulano", empleado.getNombre());
+	}
+	
+	
 	
 	
 	
