@@ -16,7 +16,6 @@ public class TestEmpresaEmpleado {
 	public void setUp() throws Exception {
 		nuevaEmpresa=new Empresa("xxx", 34);
 		empleado=new Empleado(nuevaEmpresa, "Pepito", 10.000);
-	
 	}
 	
 	//EMPRESA
@@ -47,7 +46,16 @@ public class TestEmpresaEmpleado {
 	@Test
 	public void testEmpleadogetSueldo() {
 		assertEquals("Empleado",10.000, 0, empleado.getSueldo());
-		
+	}
+	
+	@Test
+	public void testEmpleadogetNumEmpleado() {
+		assertEquals("Empleado",7, empleado.getNumEmpleado());
+	}
+	
+	@Test
+	public void testEmpleadoAumentarSueldo() {
+	//
 	}
 	
 	

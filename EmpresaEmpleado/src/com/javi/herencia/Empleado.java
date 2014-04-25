@@ -50,13 +50,13 @@ public class Empleado implements IEmpleado {
 	}
 
 	@Override
-	public void aumentarSueldo(int n) {
+	public final void aumentarSueldo(int n) {
 		this.sueldo+=n/100*this.sueldo;
 	}
 
 	@Override
 	public void despedir() {
-		
+		empresa.despideEmpleado(this.numeroEmpleado);
 	}
 
 }
