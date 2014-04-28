@@ -1,6 +1,8 @@
 package com.javi.juegos.numeros;
 
-public class JuegoAdivinaImpar extends JuegoAdivinaNumero{
+import com.javi.juegos.interfaces.Jugable;
+
+public class JuegoAdivinaImpar extends JuegoAdivinaNumero implements Jugable{
 
 	public JuegoAdivinaImpar(int numVidas, int numeroAdivinar) {
 		super(numVidas, numeroAdivinar);
@@ -13,5 +15,23 @@ public class JuegoAdivinaImpar extends JuegoAdivinaNumero{
 			return false;
 		}
 	}
+	
+	@Override
+	public void muestraNombre() {
+		System.out.println("Adivina un numero impar.");
+		// TODO Auto-generated method stub
+		
+	}
+
+
+	@Override
+	public void muestraInfo() {
+		this.muestraVidasRestantes();
+	
+		
+		// TODO Auto-generated method stub
+		
+	}
+	
 	
 }

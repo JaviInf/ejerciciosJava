@@ -1,6 +1,8 @@
 package com.javi.juegos.numeros;
 
-public class JuegoAdivinaPar extends JuegoAdivinaNumero{
+import com.javi.juegos.interfaces.Jugable;
+
+public class JuegoAdivinaPar extends JuegoAdivinaNumero implements Jugable{
 
 	public JuegoAdivinaPar(int numVidas, int numeroAdivinar) {
 		super(numVidas, numeroAdivinar);
@@ -14,5 +16,23 @@ public class JuegoAdivinaPar extends JuegoAdivinaNumero{
 			return false;
 		}
 	}
+	
+	@Override
+	public void muestraNombre() {
+		System.out.println("Adivina un numero par.");
+		// TODO Auto-generated method stub
+		
+	}
+
+
+	@Override
+	public void muestraInfo() {
+		this.muestraVidasRestantes();
+	
+		
+		// TODO Auto-generated method stub
+		
+	}
+	
 
 }
