@@ -3,8 +3,9 @@ package com.javi.juegos.numeros;
 import java.util.Scanner;
 
 import com.javi.juegos.Juego;
+import com.javi.juegos.interfaces.Jugable;
 
-public class JuegoAdivinaNumero extends Juego {
+public class JuegoAdivinaNumero extends Juego implements Jugable {
 	
 	private final int numeroAdivinar;
 
@@ -13,7 +14,7 @@ public class JuegoAdivinaNumero extends Juego {
 		this.numeroAdivinar=numeroAdivinar;
 	}
 
-	@Override
+
 	public void juega() {
 		
 		this.reiniciaPartida();
@@ -35,6 +36,24 @@ public class JuegoAdivinaNumero extends Juego {
 	
 	public boolean validaNumero(int num){
 		return true;
+	}
+
+
+	@Override
+	public void muestraNombre() {
+		System.out.println("Adivina un numero.");
+		// TODO Auto-generated method stub
+		
+	}
+
+
+	@Override
+	public void muestraInfo() {
+		this.muestraVidasRestantes();
+	
+		
+		// TODO Auto-generated method stub
+		
 	}
 
 }

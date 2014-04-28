@@ -1,6 +1,6 @@
 package com.javi.juegos;
 
-public class Juego {
+public abstract class Juego {
 	
 private int numVidas;
 private final int  numVidasInicio;
@@ -46,5 +46,7 @@ private static int record=0;
 		}
 		else return salida;
 	}
+	
+//	public abstract void juega();
 	
 }
