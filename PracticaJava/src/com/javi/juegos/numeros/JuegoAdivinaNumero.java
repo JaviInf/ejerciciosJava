@@ -22,6 +22,9 @@ public class JuegoAdivinaNumero extends Juego implements Jugable {
 		Scanner entrada= new Scanner(System.in);
 		int numEntrada=entrada.nextInt();
 		
+		if(!this.validaNumero(numEntrada)){
+			numEntrada=entrada.nextInt();
+		}
 		if(numEntrada==this.numeroAdivinar){
 			System.out.println("Acertaste");
 			this.actualizarRecord();
@@ -42,18 +45,12 @@ public class JuegoAdivinaNumero extends Juego implements Jugable {
 	@Override
 	public void muestraNombre() {
 		System.out.println("Adivina un numero.");
-		// TODO Auto-generated method stub
-		
 	}
 
 
 	@Override
 	public void muestraInfo() {
 		this.muestraVidasRestantes();
-	
-		
-		// TODO Auto-generated method stub
-		
 	}
 
 }

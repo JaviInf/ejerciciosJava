@@ -72,6 +72,16 @@ public class PracticaJava {
 	
 	
 	//juegoAdivinaPar
+		@Test
+		public void testJuegoAdivinaNum(){
+			JuegoAdivinaNumero juegoNumero= new JuegoAdivinaNumero(2, 10);
+			assertTrue(juegoNumero.validaNumero(2));
+			assertTrue(juegoNumero.validaNumero(3));
+			
+		}
+		
+	
+	//juegoAdivinaPar
 	@Test
 	public void testJuegoAdivinaPar(){
 		JuegoAdivinaPar juegoPar= new JuegoAdivinaPar(2, 10);
@@ -87,7 +97,6 @@ public class PracticaJava {
 		JuegoAdivinaImpar juegoImpar= new JuegoAdivinaImpar(2, 10);
 		assertTrue(juegoImpar.validaNumero(3));
 		assertFalse(juegoImpar.validaNumero(2));
-		
 	}
 	
 	
