@@ -13,6 +13,7 @@ public class JuegoAdivinaNumero extends Juego implements Jugable {
 	public JuegoAdivinaNumero(int numVidas, int numeroAdivinar) {
 		super(numVidas);
 		this.numeroAdivinar = numeroAdivinar;
+		//
 	}
 
 	public void juega() {
