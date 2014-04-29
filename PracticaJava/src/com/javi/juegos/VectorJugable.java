@@ -22,8 +22,6 @@ public class VectorJugable {
 		vectorJuegos.add(juegoNumero);
 		vectorJuegos.add(juegoPar);
 		vectorJuegos.add(juegoImpar);
-	
-
 		
 		System.out.println("@@@####@@@@@@######@@@@@@");
 		System.out
@@ -45,9 +43,34 @@ public class VectorJugable {
 		return vectorJuegos.elementAt(opcion);
 	}
 	
+	public static String infoVector(Vector<Jugable> vector){
+		System.out.println("Tama–o del vector: "+vector.size()+ " Capacidad del vector: "+vector.capacity());
+		return ("Tama–o del vector: "+vector.size()+ " Capacidad del vector: "+vector.capacity());
+	}
+	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		VectorJugable vectorJuegos = new VectorJugable();
+		Jugable juego = eligeMetodo();
+		juego.muestraNombre();
+		juego.muestraInfo();
+		juego.juega();
+
+		boolean seguirJugando = true;
+		while (seguirJugando == true) {
+			System.out.println("ÀSeguir jugando?");
+			String entrada="";
+
+			if (entrada.equals("si") || entrada.equals("SI") || entrada.equals("Si")) {
+				seguirJugando = true;
+				Jugable juegoNuevo = eligeMetodo();
+				juegoNuevo.muestraNombre();
+				juegoNuevo.muestraInfo();
+				juegoNuevo.juega();
+			}
+			else {
+				seguirJugando = false;
+			}
+		}
 
 	}
 

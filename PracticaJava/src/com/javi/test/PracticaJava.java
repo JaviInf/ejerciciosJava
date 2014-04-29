@@ -3,11 +3,13 @@ package com.javi.test;
 import static org.junit.Assert.*;
 
 import java.util.Scanner;
+import java.util.Vector;
 
 import org.junit.Before;
 import org.junit.Test;
 
 import com.javi.juegos.Juego;
+import com.javi.juegos.VectorJugable;
 import com.javi.juegos.interfaces.Jugable;
 import com.javi.juegos.numeros.JuegoAdivinaImpar;
 import com.javi.juegos.numeros.JuegoAdivinaNumero;
@@ -19,7 +21,7 @@ public class PracticaJava {
 
 	@Before
 	public void setUp() throws Exception {
-		juego=new JuegoAdivinaNumero(5, 0);
+	//	juego=new JuegoAdivinaNumero(5, 0);
 	}
 
 //	@Test
@@ -77,9 +79,9 @@ public class PracticaJava {
 	//juegoAdivinaPar
 		@Test
 		public void testJuegoAdivinaNum(){
-			JuegoAdivinaNumero juegoNumero= new JuegoAdivinaNumero(2, 10);
-			assertTrue(juegoNumero.validaNumero(2));
-			assertTrue(juegoNumero.validaNumero(3));
+//			JuegoAdivinaNumero juegoNumero= new JuegoAdivinaNumero(2, 10);
+//			assertTrue(juegoNumero.validaNumero(2));
+//			assertTrue(juegoNumero.validaNumero(3));
 			
 		}
 		
@@ -87,9 +89,10 @@ public class PracticaJava {
 	//juegoAdivinaPar
 	@Test
 	public void testJuegoAdivinaPar(){
-		JuegoAdivinaPar juegoPar= new JuegoAdivinaPar(2, 10);
-		assertTrue(juegoPar.validaNumero(2));
-		assertFalse(juegoPar.validaNumero(3));
+//		JuegoAdivinaPar juegoPar= new JuegoAdivinaPar(2, 10);
+//		
+//		assertTrue(juegoPar.validaNumero(2));
+//		assertFalse(juegoPar.validaNumero(3));
 		
 	}
 	
@@ -97,48 +100,65 @@ public class PracticaJava {
 	
 	@Test
 	public void testJuegoAdivinaImpar(){
-		JuegoAdivinaImpar juegoImpar= new JuegoAdivinaImpar(2, 10);
-		assertTrue(juegoImpar.validaNumero(3));
-		assertFalse(juegoImpar.validaNumero(2));
+//		JuegoAdivinaImpar juegoImpar= new JuegoAdivinaImpar(2, 10);
+//		assertTrue(juegoImpar.validaNumero(3));
+//		assertFalse(juegoImpar.validaNumero(2));
 	}
 	
-public static Jugable eligeMetodo(){
+//public static Jugable eligeMetodo(){
 		
-		JuegoAdivinaNumero juegoNumero= new JuegoAdivinaNumero(5, 9);
-		JuegoAdivinaPar juegoPar= new JuegoAdivinaPar(5, 8);
-		JuegoAdivinaImpar juegoImpar= new JuegoAdivinaImpar(5, 3);
-		
+//		JuegoAdivinaNumero juegoNumero= new JuegoAdivinaNumero(5);
+//		JuegoAdivinaPar juegoPar= new JuegoAdivinaPar(5);
+//		JuegoAdivinaImpar juegoImpar= new JuegoAdivinaImpar(5);
+//		
 		Jugable[] arrayJuegos= new Jugable[3];
-		
-		arrayJuegos[0]=juegoNumero;
-		arrayJuegos[1]=juegoPar;
-		arrayJuegos[2]=juegoImpar;
-		
-		System.out.println("@@@####@@@@@@######@@@@@@");
-		System.out.println("Menu del super Juego:  (introduce un numero del 0 al 2)");
-		System.out.println("@@@####@@@@@@######@@@@@@");
-		System.out.println("0----> Juego Adivina Numero");
-		System.out.println("1----> Juego Adivina Numero PAR");
-		System.out.println("2----> Juego Adivina Numero IMPAR");
-		System.out.println("");
-		
-		Scanner entrada= new Scanner(System.in);
-		int opcion= entrada.nextInt();
-
-		while (opcion>2 || opcion<0){
-			System.out.println("Introduce un numero de entrada valido");
-			opcion= entrada.nextInt();
-		}
-		
-		return arrayJuegos[opcion];
-	}
+//		
+//		arrayJuegos[0]=juegoNumero;
+//		arrayJuegos[1]=juegoPar;
+//		arrayJuegos[2]=juegoImpar;
+//		
+//		System.out.println("@@@####@@@@@@######@@@@@@");
+//		System.out.println("Menu del super Juego:  (introduce un numero del 0 al 2)");
+//		System.out.println("@@@####@@@@@@######@@@@@@");
+//		System.out.println("0----> Juego Adivina Numero");
+//		System.out.println("1----> Juego Adivina Numero PAR");
+//		System.out.println("2----> Juego Adivina Numero IMPAR");
+//		System.out.println("");
+//		
+//		Scanner entrada= new Scanner(System.in);
+//		int opcion= entrada.nextInt();
+//
+//		while (opcion>2 || opcion<0){
+//			System.out.println("Introduce un numero de entrada valido");
+//			opcion= entrada.nextInt();
+//		}
+//		
+//		return arrayJuegos[opcion];
+//	}
 	
 	@Test
 	public void testArrayInterfaces(){
-		Jugable juego=this.eligeMetodo();
-		//con el uno
-		Jugable jugable;
-		assertNotNull("Juego",juego);
+//		Jugable juego=this.eligeMetodo();
+//		//con el uno
+//		Jugable jugable;
+//		assertNotNull("Juego",juego);
+	}
+	
+	@Test
+	public void testVectorInterfaces(){
+		
+		JuegoAdivinaNumero juegoNumero = new JuegoAdivinaNumero(5);
+		JuegoAdivinaPar juegoPar = new JuegoAdivinaPar(5);
+		JuegoAdivinaImpar juegoImpar = new JuegoAdivinaImpar(5);
+
+		Vector<Jugable> vectorJuegos = new Vector<Jugable>();
+		vectorJuegos.add(juegoNumero);
+		vectorJuegos.add(juegoPar);
+		vectorJuegos.add(juegoImpar);
+		VectorJugable.infoVector(vectorJuegos);
+		assertEquals("VectorJugable", "Tama–o del vector: 3 Capacidad del vector: 10", juego.obtenVidasRestantes());
+		
+		
 	}
 	
 

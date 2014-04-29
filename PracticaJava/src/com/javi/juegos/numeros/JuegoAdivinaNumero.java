@@ -1,5 +1,6 @@
 package com.javi.juegos.numeros;
 
+import java.util.Date;
 import java.util.Random;
 import java.util.Scanner;
 
@@ -14,6 +15,7 @@ public class JuegoAdivinaNumero extends Juego implements Jugable {
 	public JuegoAdivinaNumero(int numVidas) {
 		super(numVidas);
 		 Random aleatorio = new Random();
+		// aleatorio.resetSeed(new Date());
 	     numeroAdivinar = aleatorio.nextInt(11);
 	     System.out.println("numero aleatorio   ....: "+numeroAdivinar);
 		

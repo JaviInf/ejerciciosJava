@@ -40,8 +40,6 @@ public class Arrays {
 			System.out.println("Introduce un numero de entrada valido");
 			opcion = entrada.nextInt();
 		}
-		
-
 		return arrayJuegos[opcion];
 	}
 
@@ -49,29 +47,20 @@ public class Arrays {
 		// TODO Auto-generated method stub
 
 		Jugable juego = eligeMetodo();
-
 		juego.muestraNombre();
-
 		juego.muestraInfo();
-
 		juego.juega();
-
 		boolean seguirJugando = true;
 		while (seguirJugando == true) {
 			System.out.println("ÀSeguir jugando?");
-
 //			String entrada = Teclado.LeeCadena();
 			String entrada="";
-
 			if (entrada.equals("si") || entrada.equals("SI") || entrada.equals("Si")) {
 				seguirJugando = true;
-				Jugable juego2 = eligeMetodo();
-
-				juego2.muestraNombre();
-
-				juego2.muestraInfo();
-
-				juego2.juega();
+				Jugable juegoNuevo = eligeMetodo();
+				juegoNuevo.muestraNombre();
+				juegoNuevo.muestraInfo();
+				juegoNuevo.juega();
 			} else {
 				seguirJugando = false;
 			}
