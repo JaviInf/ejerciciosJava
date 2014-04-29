@@ -11,9 +11,13 @@ public class Arrays {
 
 	public static Jugable eligeMetodo() {
 
-		JuegoAdivinaNumero juegoNumero = new JuegoAdivinaNumero(5, 9);
-		JuegoAdivinaPar juegoPar = new JuegoAdivinaPar(5, 8);
-		JuegoAdivinaImpar juegoImpar = new JuegoAdivinaImpar(5, 3);
+//		JuegoAdivinaNumero juegoNumero = new JuegoAdivinaNumero(5, 9);
+//		JuegoAdivinaPar juegoPar = new JuegoAdivinaPar(5, 8);
+//		JuegoAdivinaImpar juegoImpar = new JuegoAdivinaImpar(5, 3);
+		
+		JuegoAdivinaNumero juegoNumero = new JuegoAdivinaNumero(5);
+		JuegoAdivinaPar juegoPar = new JuegoAdivinaPar(5);
+		JuegoAdivinaImpar juegoImpar = new JuegoAdivinaImpar(5);
 
 		Jugable[] arrayJuegos = new Jugable[3];
 
@@ -36,6 +40,7 @@ public class Arrays {
 			System.out.println("Introduce un numero de entrada valido");
 			opcion = entrada.nextInt();
 		}
+		
 
 		return arrayJuegos[opcion];
 	}

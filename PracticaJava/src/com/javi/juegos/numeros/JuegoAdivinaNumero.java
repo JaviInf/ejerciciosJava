@@ -1,5 +1,6 @@
 package com.javi.juegos.numeros;
 
+import java.util.Random;
 import java.util.Scanner;
 
 import com.javi.juegos.Juego;
@@ -7,13 +8,15 @@ import com.javi.juegos.interfaces.Jugable;
 
 public class JuegoAdivinaNumero extends Juego implements Jugable {
 
-	private final int numeroAdivinar;
+	private int numeroAdivinar;
 	boolean detenerPartida;
 
-	public JuegoAdivinaNumero(int numVidas, int numeroAdivinar) {
+	public JuegoAdivinaNumero(int numVidas) {
 		super(numVidas);
-		this.numeroAdivinar = numeroAdivinar;
-		//
+		 Random aleatorio = new Random();
+	     numeroAdivinar = aleatorio.nextInt(11);
+	     System.out.println("numero aleatorio   ....: "+numeroAdivinar);
+		
 	}
 
 	public void juega() {
@@ -39,6 +42,9 @@ public class JuegoAdivinaNumero extends Juego implements Jugable {
 					else
 						System.out.println("El numero secreto es mayor");
 				}
+				else{
+					detenerPartida=true;
+				}
 			}
 
 		}
@@ -55,7 +61,22 @@ public class JuegoAdivinaNumero extends Juego implements Jugable {
 
 	@Override
 	public void muestraInfo() {
+		 System.out.println("Acierta el numero secreto, debes ir metiendo probando hasta acertarlo o que quedarte sin intentos.");
 		this.muestraVidasRestantes();
+	}
+	
+	public void reiniciarPartida(){
+		super.reiniciaPartida();
+		Random numero= new Random();
+		numeroAdivinar=numero.nextInt(11);
+		 System.out.println("Nuevo numero a adivinar"+numeroAdivinar);
+	}
+	
+	public int getNumeroAdivinar(){
+		return this.numeroAdivinar;
+	}
+	public void setNumeroAdivinar(int n){
+		 this.numeroAdivinar=n;
 	}
 
 }
