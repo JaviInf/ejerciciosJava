@@ -2,8 +2,13 @@ package com.javi.juegos.excepciones;
 
 public class JuegoException extends Exception {
 
-	public JuegoException() {
-		// TODO Auto-generated constructor stub
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	public JuegoException(String arg0) {
+		super(arg0);
 	}
 
 }

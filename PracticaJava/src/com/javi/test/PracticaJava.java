@@ -6,6 +6,7 @@ import java.util.Scanner;
 import java.util.Vector;
 
 import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.Test;
 
 import com.javi.juegos.Juego;
@@ -21,45 +22,45 @@ public class PracticaJava {
 
 	@Before
 	public void setUp() throws Exception {
-	//	juego=new JuegoAdivinaNumero(5, 0);
+		juego=new JuegoAdivinaNumero(5);
 	}
 
-//	@Test
-//	public void testNumeroVidasRestantes() {
-//		assertEquals("Juego",5, juego.obtenVidasRestantes());
-//	}
-//	@Test
-//	public void testRestarVidayMostrar(){
-//		juego.numVidas--;
+	@Test
+	public void testNumeroVidasRestantes() {
+		assertEquals("Juego",5, juego.obtenVidasRestantes());
+	}
+	@Ignore
+	public void testRestarVidayMostrar(){
+		//juego.numVidas--;
+		assertEquals("Juego", 5, juego.obtenVidasRestantes());
+	}
+	
+	@Ignore
+	public void testNuevaInstancia(){
+//	Juego nuevojuego=new Juego(5);
+//	assertEquals("Juego", 5, nuevojuego.obtenVidasRestantes());
+//	juego.numVidas--;
 //		assertEquals("Juego", 4, juego.obtenVidasRestantes());
-//	}
+	}
 //	
-//	@Test
-//	public void testNuevaInstancia(){
-//		Juego nuevojuego=new Juego(5);
-//		assertEquals("Juego", 5, nuevojuego.obtenVidasRestantes());
-//		juego.numVidas--;
-//		assertEquals("Juego", 4, juego.obtenVidasRestantes());
-//	}
-//	
-//	@Test
-//	public void testQuitaVida(){
+	@Test
+	public void testQuitaVida(){
 //		assertEquals("Juego", 5, juego.obtenVidasRestantes());
 //		juego.quitaVidas();
 //		assertEquals("Juego", 4, juego.obtenVidasRestantes());
-//	}
+	}
 //	
-//	@Test
-//	public void testReiniciaPartida(){
+	@Test
+	public void testReiniciaPartida(){
 //		assertEquals("Juego", 5, juego.obtenVidasRestantes());
 //		juego.quitaVidas();
 //		assertEquals("Juego", 4, juego.obtenVidasRestantes());
 //		juego.reiniciaPartida();
 //		assertEquals("Juego", 5, juego.obtenVidasRestantes());
-//	}
+	}
 //	
-//	@Test
-//	public void actualizaRecord(){ // 3 casos 1-record igualado   2-record superado    3-nada
+	@Test
+	public void actualizaRecord(){ // 3 casos 1-record igualado   2-record superado    3-nada
 //		juego.quitaVidas();
 //		 pruebo que actualiza record
 //		assertEquals("Juego", 4, juego.obtenVidasRestantes());
@@ -73,11 +74,11 @@ public class PracticaJava {
 //		Juego nuevoEmpate=new Juego(4);
 //		assertEquals("Juego", "Se ha alcanzado el record" , nuevoEmpate.actualizarRecord());
 //
-//	}
+	}
 	
 	
 	//juegoAdivinaPar
-		@Test
+		@Ignore
 		public void testJuegoAdivinaNum(){
 //			JuegoAdivinaNumero juegoNumero= new JuegoAdivinaNumero(2, 10);
 //			assertTrue(juegoNumero.validaNumero(2));
@@ -85,9 +86,17 @@ public class PracticaJava {
 			
 		}
 		
+		@Test
+		public void testJuegoAdivinaNum1(){
+			JuegoAdivinaNumero juegoNumero= new JuegoAdivinaNumero(2);
+			assertTrue(juegoNumero.validaNumero(2));
+			assertTrue(juegoNumero.validaNumero(3));
+		}
+		
+		
 	
 	//juegoAdivinaPar
-	@Test
+	@Ignore
 	public void testJuegoAdivinaPar(){
 //		JuegoAdivinaPar juegoPar= new JuegoAdivinaPar(2, 10);
 //		
@@ -96,13 +105,28 @@ public class PracticaJava {
 		
 	}
 	
+	@Test
+	public void testJuegoAdivinaPar1(){
+		JuegoAdivinaPar juegoPar= new JuegoAdivinaPar(2);
+		assertTrue(juegoPar.validaNumero(2));
+		assertFalse(juegoPar.validaNumero(3));
+		
+	}
+	
 	//juegoAdivinaImar
 	
-	@Test
+	@Ignore
 	public void testJuegoAdivinaImpar(){
 //		JuegoAdivinaImpar juegoImpar= new JuegoAdivinaImpar(2, 10);
 //		assertTrue(juegoImpar.validaNumero(3));
 //		assertFalse(juegoImpar.validaNumero(2));
+	}
+	
+	@Test
+	public void testJuegoAdivinaImpar1(){
+		JuegoAdivinaImpar juegoImpar= new JuegoAdivinaImpar(3);
+		assertTrue(juegoImpar.validaNumero(3));
+		assertFalse(juegoImpar.validaNumero(2));
 	}
 	
 //public static Jugable eligeMetodo(){
@@ -138,10 +162,10 @@ public class PracticaJava {
 	
 	@Test
 	public void testArrayInterfaces(){
-//		Jugable juego=this.eligeMetodo();
-//		//con el uno
-//		Jugable jugable;
-//		assertNotNull("Juego",juego);
+		//Jugable juego=this.eligeMetodo();
+		//con el uno
+	//	Jugable jugable;
+	//	assertNotNull("Juego",juego);
 	}
 	
 	@Test
@@ -156,7 +180,7 @@ public class PracticaJava {
 		vectorJuegos.add(juegoPar);
 		vectorJuegos.add(juegoImpar);
 		VectorJugable.infoVector(vectorJuegos);
-		assertEquals("VectorJugable", "Tamaño del vector: 3 Capacidad del vector: 10", juego.obtenVidasRestantes());
+		//assertEquals("VectorJugable", "Tama√±oo del vector: 3 Capacidad del vector: 10", juego.obtenVidasRestantes());
 		
 		
 	}
